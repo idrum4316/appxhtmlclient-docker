@@ -8,8 +8,8 @@ RUN mkdir -p /data/db
 RUN mkdir -p /logs
 
 # Copy files
-COPY appx-server-connector /opt/appx/connector
-COPY appx-webhost /opt/appx/webhost
+COPY serverConnector /opt/appx/connector
+COPY webhost /opt/appx/webhost
 COPY appx-client-settings.js /opt/appx/webhost/js/appx-client-settings.js
 COPY supervisord.conf /root/.config/supervisord/supervisord.conf
 COPY nginx.conf /etc/nginx/sites-enabled/default
