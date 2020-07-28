@@ -1,5 +1,9 @@
 FROM ubuntu
 
+# To prevent hanging at tzdata install
+ENV TZ=America/Chicago
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # Install Dependencies
 RUN apt update && apt upgrade -y
 RUN apt install -y mongodb-server nginx supervisor nodejs npm
