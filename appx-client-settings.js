@@ -9,7 +9,7 @@ function setMetas(callback) {
 
     /***************** REQUIRED *********************/
 	metas["appx-login-host"]["value"] = ""; 			/** server name or IP where appxLoginMgr is**/
-	metas["appx-proxy-host"]["value"] = window.location.port;          	/** server name or IP providing reverse web proxy to mask ports 3014 and 3015 (if used) **/
+	metas["appx-proxy-host"]["value"] = window.location.hostname;          	/** server name or IP providing reverse web proxy to mask ports 3014 and 3015 (if used) **/
 	metas["appx-app-name"  ]["value"] = "APPX";               	/** Application Name that shows up on local connector's security confirmation popup **/
 
     /***************** NON-REQUIRED ****************/
